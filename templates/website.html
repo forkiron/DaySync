@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DaySync</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='website.css') }}">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+</head>
+
+<body>
+
+
+    <h1><div id= "clock" onload="currentTime()"></div></h1>
+
+    <form id="form_move"action="/submit" method="POST">
+        <div id="dropdown_move">
+            <select name="dropdown" id="dropdown_container">
+                <option value="productivity">Productivity</option>
+                <option value="day_cycle">Day Cycle</option>
+            </select>
+        </div>
+    </form>    
+
+    <script src="{{ url_for('static', filename='website.js') }}"></script>
+</body>
+</html>
